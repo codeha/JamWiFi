@@ -12,7 +12,7 @@
 
 - (id)initWithData:(NSData *)data {
     if ((self = [super init])) {
-        if ([data length] < 24) return nil;
+        if ([data length] < 1000) return nil;
         packetData = (unsigned char *)malloc([data length]);
         memcpy(packetData, [data bytes], [data length]);
         macHeader = (MACHeader *)packetData;
